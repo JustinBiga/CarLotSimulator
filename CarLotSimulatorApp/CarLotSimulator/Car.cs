@@ -3,6 +3,11 @@ namespace CarLotSimulator
 {
     public class Car
     {
+        public Car()
+        {
+            CarLot.NumberOfCars++;
+        }
+
         //Properties
         public int Year { get; set; }
         public string Make { get; set; }
@@ -15,12 +20,20 @@ namespace CarLotSimulator
         // Methods
         public void MakeEngineNoise(string noise)
         {
-            Console.WriteLine($"Engine noise of {Make} {Model} sounds like {noise}");
+            Console.WriteLine($"Engine noise of {Year} {Make} {Model} sounds like {noise}");
         }
 
         public void MakeHonkNoise(string noise)
         {
-            Console.WriteLine($"Honk noise of {Make} {Model} sounds like {noise}");
-    }   }
+            Console.WriteLine($"Honk noise of {Year} {Make} {Model} sounds like {noise}");
+
+
+        }
+
+    }
+    
+
+   
+
 
 }
